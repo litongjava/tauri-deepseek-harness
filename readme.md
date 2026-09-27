@@ -1,7 +1,7 @@
 # tauri-deepseek-harness
 
 A standalone desktop application for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness), built with [Tauri](https://tauri.app/).
-
+![](readme_files/1.jpg)
 ![1](readme_files/1.png)
 
 ## Features

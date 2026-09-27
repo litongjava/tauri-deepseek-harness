@@ -1,7 +1,7 @@
 # tauri-deepseek-harness
 
 一个基于 [Tauri](https://tauri.app/) 构建的 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 桌面客户端。
-
+![](readme_files/1.jpg)
 ![1](readme_files/1.png)
 
 ## 功能
