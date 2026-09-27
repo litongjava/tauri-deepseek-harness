@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>连接 DeepSeek Harness</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <p class="brand">DEEPSEEK HARNESS</p>
+      <h1>连接你的 Harness</h1>
+      <p class="description">先运行 <code>dsh web</code>，再粘贴终端输出的完整地址（包含 token）。</p>
+      <form id="connect-form">
+        <label for="address">Web 地址</label>
+        <input id="address" name="address" type="text" inputmode="url" placeholder="http://127.0.0.1:3080/?token=..." autocomplete="off" spellcheck="false" autofocus required aria-describedby="error">
+        <p id="error" role="alert" aria-live="polite"></p>
+        <button id="connect" type="submit">连接 Harness</button>
+      </form>
+      <p class="hint">关闭 Harness 窗口即可返回这里更换地址。退出程序请关闭本窗口。</p>
+    </main>
+  </body>
+</html>

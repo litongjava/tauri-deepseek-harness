@@ -75,8 +75,20 @@ dsh web
 ## 使用说明
 
 1. 运行 `dsh web` 启动 DeepSeek Harness（见上文）。
-2. 启动桌面应用，它将打开位于 `http://127.0.0.1:3080` 的 Harness 界面。
+2. 启动桌面应用，在弹出的连接窗口中粘贴 `dsh web` 输出的完整 URL（含 `?token=...`），点击“连接 Harness”。
 3. 在界面中输入你的 API Key，即可开始对话。
+
+### Web token 认证
+
+每次启动都会显示地址输入窗口，无需设置环境变量。此流程替代之前的 `DSH_WEB_URL` 方式。旧版桌面程序需要先用当前源码重新构建安装。
+
+粘贴的地址应类似 `http://127.0.0.1:3080/?token=YOUR_CURRENT_TOKEN`，请使用当前终端实际输出的完整地址。输入框支持自定义端口和 HTTP/HTTPS 地址。
+
+使用期间保持 `dsh web` 运行。如果 token 改变或出现 `dsh web authentication required`，关闭 Harness 窗口即可回到连接窗口，粘贴新的完整地址重新连接。关闭连接窗口则退出程序。
+
+连接成功打开窗口后，输入框会清空；启动页不会把地址或 token 保存到配置文件。浏览器中打开认证地址不能代替桌面 WebView 的认证。
+
+开发运行使用 `cargo tauri dev`，构建安装包使用 `cargo tauri build`。
 
 ## 缓存
 

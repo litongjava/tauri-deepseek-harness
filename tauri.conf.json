@@ -4,20 +4,22 @@
   "version": "0.1.0",
   "identifier": "com.litongjava.tauri.deepseek.harness",
   "build": {
-    "frontendDist": "dist",
-    "devUrl": "http://127.0.0.1:3080/"
+    "frontendDist": "dist"
   },
   "app": {
+    "withGlobalTauri": true,
     "windows": [
       {
-        "title": "Tauri deepseek",
+        "label": "main",
+        "title": "连接 DeepSeek Harness",
         "fullscreen": false,
         "resizable": true,
-        "height": 1000,
-        "width": 1500,
-        "url": "http://127.0.0.1:3080/",
-        "x": 100,
-        "y": 0
+        "height": 440,
+        "width": 660,
+        "minHeight": 400,
+        "minWidth": 520,
+        "url": "index.html",
+        "center": true
       }
     ],
     "security": {

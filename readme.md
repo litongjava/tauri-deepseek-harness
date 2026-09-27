@@ -75,8 +75,20 @@ Download the pre-built binary for your platform from the [Releases](https://gith
 ## Usage
 
 1. Start DeepSeek Harness with `dsh web` (see above).
-2. Launch the desktop application — it opens the harness interface at `http://127.0.0.1:3080`.
+2. Launch the desktop app, paste the complete URL printed by `dsh web` (including `?token=...`) into the connection window, and click Connect Harness.
 3. Enter your API key in the interface and start chatting.
+
+### Web Token Authentication
+
+The app now shows an address entry window on every launch, replacing the previous `DSH_WEB_URL` environment variable workflow. Rebuild and reinstall older desktop binaries to use this feature.
+
+Paste the current complete address, such as `http://127.0.0.1:3080/?token=YOUR_CURRENT_TOKEN`. Custom ports and HTTP/HTTPS addresses are supported.
+
+Keep `dsh web` running. If the token changes or you see `dsh web authentication required`, close the Harness window to return to the connection window and paste the new URL. Close the connection window to exit the app.
+
+The input is cleared after opening the Harness window. The launcher does not save addresses or tokens to a configuration file. Authenticating in your browser does not authenticate the desktop WebView.
+
+Use `cargo tauri dev` for development or `cargo tauri build` to create an installer.
 
 ## Cache
 
